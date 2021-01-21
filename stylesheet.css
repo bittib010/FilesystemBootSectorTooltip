@@ -15,7 +15,7 @@ td, th {
 }
 
 body:not(.nohover) tbody tr:hover {
-    background-color: #ffa;
+    background-color: black;
 }
 
 td:hover::after, thead th:not(:empty):hover::after, td:focus::after, thead th:not(:empty):focus::after {
