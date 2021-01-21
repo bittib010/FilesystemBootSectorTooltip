@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Java Programming popups</title>
+    <title>FAT bootsector tooltips</title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 
@@ -41,50 +41,36 @@
                 <td class="offset">000000</td>
                 <td><span class="tooltip">eb<span class="tooltiptext">Bytes: 0-2 <br>Offset: 0x00 <br>Purpose: Assembly
                             code instructions to jump to
-                            boot code (mandatory in bootable partition)</span></span></td>
+                            boot code (mandatory in bootable partition)</span></span>
+                </td>
                 <td><span class="tooltip">3f<span class="tooltiptext">Bytes: 0-2 <br>Offset: 0x01 <br>Purpose: Assembly
                             code instructions to jump to
-                            boot code (mandatory in bootable partition)</span></span></td>
+                            boot code (mandatory in bootable partition)</span></span>
+                </td>
                 <td><span class="tooltip">90<span class="tooltiptext">Bytes: 0-2 <br>Offset: 0x02 <br>Purpose: Assembly
-                            code instructions to jump to
-                            boot code (mandatory in bootable partition)</span></span></td>
-                <td><span class="tooltip">49<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x03<br>Purpose: OEM name
-                            in ASCII</span></td>
-                <td><span class="tooltip">42<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x04<br>Purpose: OEM name
-                            in ASCII</span></td>
-                <td><span class="tooltip">4d<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x05<br>Purpose: OEM name
-                            in ASCII</span></td>
-                <td><span class="tooltip">20<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x06<br>Purpose: OEM name
-                            in ASCII</span></td>
-                <td><span class="tooltip">20<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x07<br>Purpose: OEM name
-                            in ASCII</span></td>
-                <td><span class="tooltip">33<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x08<br>Purpose: OEM name
-                            in ASCII</span></td>
-                <td><span class="tooltip">2e<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x09<br>Purpose: OEM name
-                            in ASCII</span></td>
-                <td><span class="tooltip">33<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x010<br>Purpose: OEM name
-                            in ASCII</span></td>
-                <td><span class="tooltip">00<span class="tooltiptext">Bytes: 11-12<br>Offset: 0x011<br>Purpose: Bytes
-                            per sector (512, 1024, 2048, or 4096)</span></td>
-                <td><span class="tooltip">02<span class="tooltiptext">Bytes: 11-12<br>Offset: 0x012<br>Purpose: Bytes
-                            per sector (512, 1024, 2048, or 4096)</span></td>
-                <td><span class="tooltip">01<span class="tooltiptext">Byte: 13<br>Offset: 0x013<br>Purpose: Sectors per
-                            cluster (Must be a power of 2 and cluster size must be &#60 32KB)</span></td>
-                <td><span class="tooltip">01<span class="tooltiptext">Bytes: 14-15<br>Offset: 0x014<br>Purpose: Size of
-                            reserved area, in sectors </span></td>
-                <td><span class="tooltip">00<span class="tooltiptext">Bytes: 14-15<br>Offset: 0x015<br>Purpose: Size of
-                            reserved area, in sectors </span></td>
+                            code instructions to jump to boot code (mandatory in bootable partition)</span></span>
+                </td>
+                <td><span class="tooltip">49<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x03<br>Purpose: OEM name in ASCII</span></td>
+                <td><span class="tooltip">42<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x04<br>Purpose: OEM name in ASCII</span></td>
+                <td><span class="tooltip">4d<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x05<br>Purpose: OEM name in ASCII</span></td>
+                <td><span class="tooltip">20<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x06<br>Purpose: OEM name in ASCII</span></td>
+                <td><span class="tooltip">20<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x07<br>Purpose: OEM name in ASCII</span></td>
+                <td><span class="tooltip">33<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x08<br>Purpose: OEM name in ASCII</span></td>
+                <td><span class="tooltip">2e<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x09<br>Purpose: OEM name in ASCII</span></td>
+                <td><span class="tooltip">33<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x010<br>Purpose: OEM name in ASCII</span></td>
+                <td><span class="tooltip">00<span class="tooltiptext">Bytes: 11-12<br>Offset: 0x011<br>Purpose: Bytes per sector (512, 1024, 2048, or 4096)</span></td>
+                <td><span class="tooltip">02<span class="tooltiptext">Bytes: 11-12<br>Offset: 0x012<br>Purpose: Bytes per sector (512, 1024, 2048, or 4096)</span></td>
+                <td><span class="tooltip">01<span class="tooltiptext">Byte: 13<br>Offset: 0x013<br>Purpose: Sectors per cluster (Must be a power of 2 and cluster size must be &#60 32KB)</span></td>
+                <td><span class="tooltip">01<span class="tooltiptext">Bytes: 14-15<br>Offset: 0x014<br>Purpose: Size of reserved area, in sectors </span></td>
+                <td><span class="tooltip">00<span class="tooltiptext">Bytes: 14-15<br>Offset: 0x015<br>Purpose: Size of reserved area, in sectors </span></td>
             </tr>
+
             <tr>
                 <td class="offset">000010</td>
-                <td><span class="tooltip">02<span class="tooltiptext">Byte: 16<br>Offset: 0x10<br>Purpose: Number of
-                            FATs (usually 2) </span></td>
-                <td><span class="tooltip">e0<span class="tooltiptext">Bytes: 17-18<br>Offset: 0x11<br>Purpose: Maximum
-                            number of files in the root directory (FAT12/16; 0 for FAT32) </span></td>
-                <td><span class="tooltip">00<span class="tooltiptext">Bytes: 17-18<br>Offset: 0x12<br>Purpose: Maximum
-                            number of files in the root directory (FAT12/16; 0 for FAT32) </span></td>
-                <td><span class="tooltip">40<span class="tooltiptext">Bytes: 19-20<br>Offset: 0x13<br>Purpose: Number of
-                            sectors in the file system; if 2 B is not large enough, set to 0 and use 4 B value in bytes
+                <td><span class="tooltip">02<span class="tooltiptext">Byte: 16<br>Offset: 0x10<br>Purpose: Number of FATs (usually 2) </span></td>
+                <td><span class="tooltip">e0<span class="tooltiptext">Bytes: 17-18<br>Offset: 0x11<br>Purpose: Maximum number of files in the root directory (FAT12/16; 0 for FAT32) </span></td>
+                <td><span class="tooltip">00<span class="tooltiptext">Bytes: 17-18<br>Offset: 0x12<br>Purpose: Maximum number of files in the root directory (FAT12/16; 0 for FAT32) </span></td>
+                <td><span class="tooltip">40<span class="tooltiptext">Bytes: 19-20<br>Offset: 0x13<br>Purpose: Number of sectors in the file system; if 2 B is not large enough, set to 0 and use 4 B value in bytes
                             32-35 below </span></td>
                 <td><span class="tooltip">0b<span class="tooltiptext">Bytes: 19-20<br>Offset: 0x14<br>Purpose: Number of
                             sectors in the file system; if 2 B is not large enough, set to 0 and use 4 B value in bytes
@@ -138,6 +124,7 @@
                 <td><span class="tooltip">ff<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">49<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">42<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">000030</td>
                 <td><span class="tooltip">4d<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
@@ -156,6 +143,7 @@
                 <td><span class="tooltip">08<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">00<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">18<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">000040</td>
                 <td><span class="tooltip">0a<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
@@ -174,6 +162,7 @@
                 <td><span class="tooltip">33<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">d2<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">cd<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">000050</td>
                 <td><span class="tooltip">13<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
@@ -192,6 +181,7 @@
                 <td><span class="tooltip">46<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">02<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">b9<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">000060</td>
                 <td><span class="tooltip">0b<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
@@ -210,6 +200,7 @@
                 <td><span class="tooltip">8a<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">46<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">0d<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">000070</td>
                 <td><span class="tooltip">89<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
@@ -228,6 +219,7 @@
                 <td><span class="tooltip">d2<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">00<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">8b<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">000080</td>
                 <td><span class="tooltip">4e<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
@@ -246,6 +238,7 @@
                 <td><span class="tooltip">c0<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">83<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">d2<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">000090</td>
                 <td><span class="tooltip">00<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
@@ -264,6 +257,7 @@
                 <td><span class="tooltip">77<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">05<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">c7<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">0000a0</td>
                 <td><span class="tooltip">46<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
@@ -282,6 +276,7 @@
                 <td><span class="tooltip">5e<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">11<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">53<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">0000b0</td>
                 <td><span class="tooltip">83<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
@@ -300,6 +295,7 @@
                 <td><span class="tooltip">06<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">e8<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">b3<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">0000c0</td>
                 <td><span class="tooltip">00<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
@@ -318,6 +314,7 @@
                 <td><span class="tooltip">8d<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">76<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">2e<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">0000d0</td>
                 <td><span class="tooltip">b9<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
@@ -336,6 +333,7 @@
                 <td><span class="tooltip">ed<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">be<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">d2<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">0000e0</td>
                 <td><span class="tooltip">7d<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
@@ -354,6 +352,7 @@
                 <td><span class="tooltip">ff<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">75<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">1a<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">0000f0</td>
                 <td><span class="tooltip">26<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
@@ -372,6 +371,7 @@
                 <td><span class="tooltip">c7<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">7d<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">e8<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">000100</td>
                 <td><span class="tooltip">bf<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
@@ -390,6 +390,7 @@
                 <td><span class="tooltip">00<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">8e<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">46<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">000110</td>
                 <td><span class="tooltip">3c<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
@@ -408,6 +409,7 @@
                 <td><span class="tooltip">8e<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">46<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">2a<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">000120</td>
                 <td><span class="tooltip">8b<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
@@ -426,6 +428,7 @@
                 <td><span class="tooltip">56<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">26<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">00<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">000130</td>
                 <td><span class="tooltip">56<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
@@ -444,6 +447,7 @@
                 <td><span class="tooltip">e8<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">34<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">00<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">000140</td>
                 <td><span class="tooltip">5b<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
@@ -462,6 +466,7 @@
                 <td><span class="tooltip">81<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">7e<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">2c<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">000150</td>
                 <td><span class="tooltip">ff<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
@@ -480,6 +485,7 @@
                 <td><span class="tooltip">b1<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">04<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">d3<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">000160</td>
                 <td><span class="tooltip">eb<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
@@ -498,6 +504,7 @@
                 <td><span class="tooltip">8a<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">96<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">fd<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">000170</td>
                 <td><span class="tooltip">01<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
@@ -516,6 +523,7 @@
                 <td><span class="tooltip">05<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">20<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">00<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">000180</td>
                 <td><span class="tooltip">8e<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
@@ -534,6 +542,7 @@
                 <td><span class="tooltip">75<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">e5<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">c3<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">000190</td>
                 <td><span class="tooltip">f7<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
@@ -552,6 +561,7 @@
                 <td><span class="tooltip">d0<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">cc<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">d0<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">0001a0</td>
                 <td><span class="tooltip">cc<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
@@ -570,6 +580,7 @@
                 <td><span class="tooltip">01<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">02<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">cd<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">0001b0</td>
                 <td><span class="tooltip">13<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
@@ -588,6 +599,7 @@
                 <td><span class="tooltip">2b<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">db<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">cd<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">0001c0</td>
                 <td><span class="tooltip">10<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
@@ -606,6 +618,7 @@
                 <td><span class="tooltip">67<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">2e<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">2e<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">0001d0</td>
                 <td><span class="tooltip">2e<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
@@ -624,6 +637,7 @@
                 <td><span class="tooltip">61<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">64<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">20<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">0001e0</td>
                 <td><span class="tooltip">66<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
@@ -642,6 +656,7 @@
                 <td><span class="tooltip">20<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">6b<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
                 <td><span class="tooltip">65<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
+            </tr>
             <tr>
                 <td class="offset">0001f0</td>
                 <td><span class="tooltip">79<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose: </span></td>
