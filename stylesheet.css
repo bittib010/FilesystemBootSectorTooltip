@@ -1,56 +1,79 @@
-.tooltip{content: '';
-height: 10000px;
-left: 0;
-position: absolute;
-top: -5000px;
-width: 100%;
-z-index: -1;
+body{
+    background-color: black;
+    color: #aaaaaa
+}
+
+
+table {
+    overflow: hidden;
+}
+
+td, th {
+    padding: 10px;
+    position: relative;
+    outline: 0;
+}
+
+body:not(.nohover) tbody tr:hover {
+    background-color: #ffa;
+}
+
+td:hover::after, thead th:not(:empty):hover::after, td:focus::after, thead th:not(:empty):focus::after {
+    content: '';
+    height: 10000px;
+    left: 0;
+    position: absolute;
+    top: -5000px;
+    width: 100%;
+    z-index: -1;
 }
 
 td:hover::after, th:hover::after {
-background-color: white;
+    background-color: white;
 }
 
 td:focus::after, th:focus::after {
-background-color: white;
+    background-color: white;
 }
 
 /* tooltip (the box) and the tooltiptext (the text) is styled this way. */
 
 .tooltip .tooltiptext {
-visibility: hidden;
-width: fit-content;
-height: fit-content;
-left: 50%;
-background-color: black;
-color: #5fd032;
-border: 2px solid #5fd032;
-border-radius: 6px;
-padding: 5px 5px;
-position: fixed;
-padding: 2px;
-bottom: 0;  
-margin: 0 auto;
-transform: translate(-50%, -50%);     
-text-align: left;
+    visibility: hidden;
+    width: fit-content;
+    height: fit-content;
+    left: 50%;
+    background-color: black;
+    color: #5fd032;
+    border: 2px solid #5fd032;
+    border-radius: 6px;
+    padding: 5px 5px;
+    position: fixed;
+    padding: 2px;
+    bottom: 0;
+    margin: 0 auto;
+    transform: translate(-50%, -50%);
+    text-align: left;
 }
 
 /* Hover over tooltip to show tooltiptext */
+
 .tooltip:hover .tooltiptext {
-visibility: visible;
+    visibility: visible;
 }
 
 /* Highlight hovered byte */
-.tooltip:hover {
-color: white;
-background-color: black;
-height: auto;
 
+.tooltip:hover {
+    color: white;
+    background-color: black;
+    height: auto;
 }
 
 /* The code box layout */
+
 .codeBox {
-color: #aaaaaa;
-border: 2px solid rgb(209, 208, 207);
-margin-bottom: 20px;
+    color: #aaaaaa;
+    border: 2px solid rgb(209, 208, 207);
+    margin-bottom: 20px;
 }
