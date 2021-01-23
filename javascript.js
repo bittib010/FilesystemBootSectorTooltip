@@ -1,7 +1,7 @@
 
 // https://stackoverflow.com/questions/12786810/hover-on-element-and-highlight-all-elements-with-the-same-class
 
-var classes = ["one", "two", "three"]; //list of your classes
+var classes = ["OEM", "two", "three"]; //list of your classes
 var elms = {};
 var n = {}, nclasses = classes.length;
 function changeColor(classname, color) {
