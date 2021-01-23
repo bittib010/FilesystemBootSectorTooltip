@@ -26,7 +26,6 @@ td:hover::after, thead th:not(:empty):hover::after, td:focus::after, thead th:no
     top: -5000px;
     width: 100%;
     z-index: -1;
-    opacity:1;
 }
 
 td:hover::after, th:hover::after {
@@ -55,6 +54,7 @@ td:focus::after, th:focus::after {
     margin: 0 auto;
     transform: translate(-50%, -50%);
     text-align: left;
+    z-index: 1;
 }
 
 /* Hover over tooltip to show tooltiptext */
