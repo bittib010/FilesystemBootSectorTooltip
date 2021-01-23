@@ -60,6 +60,7 @@ td:focus::after, th:focus::after {
 
 .tooltip:hover .tooltiptext {
     visibility: visible;
+    opacity: 1;
 }
 
 /* Highlight hovered byte */
