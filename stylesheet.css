@@ -55,13 +55,13 @@ td:focus::after, th:focus::after {
     margin: 0 auto;
     transform: translate(-50%, -50%);
     text-align: left;
+    opacity: 1;
 }
 
 /* Hover over tooltip to show tooltiptext */
 
 .tooltip:hover .tooltiptext {
     visibility: visible;
-    opacity: 1;
 }
 
 /* Highlight hovered byte */
