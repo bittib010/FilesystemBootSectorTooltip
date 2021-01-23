@@ -9,15 +9,19 @@ table {
 }
 
 td, th {
-    padding: 7px;
+    padding: 5px;
     position: relative;
     outline: 0;
+    padding-left: 2px;
 }
 
-tr:nth-child(9){
+/* Separating 8 bytes by a little to make it easier to view/count */
+td:nth-child(9){
     margin-right: 4px;
 }
 
+
+/* Horisontal highlighting (rows)*/
 body:not(.nohover) tbody tr:hover {
     background-color: white;
 }
