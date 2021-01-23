@@ -9,7 +9,7 @@ table {
 }
 
 td, th {
-    padding: 10px;
+    padding: 7px;
     position: relative;
     outline: 0;
 }
@@ -55,7 +55,6 @@ td:focus::after, th:focus::after {
     margin: 0 auto;
     transform: translate(-50%, -50%);
     text-align: left;
-    opacity: 1;
 }
 
 /* Hover over tooltip to show tooltiptext */
