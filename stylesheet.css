@@ -71,6 +71,9 @@ td:focus::after, th:focus::after {
     height: auto;
 }
 
+.tooltip{
+    
+
 /* The code box layout */
 
 .codeBox {
