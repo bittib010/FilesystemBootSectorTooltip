@@ -19,7 +19,7 @@ tr:nth-child(9){
 }
 
 body:not(.nohover) tbody tr:hover {
-    background-color: black;
+    background-color: white;
 }
 
 td:hover::after, thead th:not(:empty):hover::after, td:focus::after, thead th:not(:empty):focus::after {
