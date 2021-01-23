@@ -15,7 +15,7 @@ td, th {
 }
 
 body:not(.nohover) tbody tr:hover {
-    background-color: black;
+    background-color: white;
 }
 
 td:hover::after, thead th:not(:empty):hover::after, td:focus::after, thead th:not(:empty):focus::after {
@@ -26,6 +26,7 @@ td:hover::after, thead th:not(:empty):hover::after, td:focus::after, thead th:no
     top: -5000px;
     width: 100%;
     z-index: -1;
+    opacity:1;
 }
 
 td:hover::after, th:hover::after {
