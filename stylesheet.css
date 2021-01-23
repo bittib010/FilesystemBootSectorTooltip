@@ -73,15 +73,12 @@ td:focus::after, th:focus::after {
     color: white;
     background-color: black;
     height: auto;
-}
-
-.tooltip{
-    
+}    
 
 /* The code box layout */
 
 .codeBox {
-    color: #aaaaaa;
+    color: white;
     border: 2px solid rgb(209, 208, 207);
     margin-bottom: 20px;
 }
