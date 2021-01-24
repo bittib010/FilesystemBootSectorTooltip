@@ -18,7 +18,7 @@ for i in boot_sector.split():
         print("\t<thead>\n\t\t<tr>")
     if counter == 0 and counter_rounds != 0:
             print("\t\t<tr>")
-    print("\t\t\t<td>", i, "</td>")
+    print("\t\t\t<td><span class=\"tooltip\">", i, "<span class=\"tooltiptext\">Bytes: <br>Offset: 0x<br>Purpose: </span></span></td>")
     if counter == 16:
         counter = 0
         print("\t\t</tr>")
