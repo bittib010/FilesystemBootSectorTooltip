@@ -16,7 +16,7 @@ td, th {
 }
 
 /* Separating 8 bytes by a little to make it easier to view/count */
-th:nth-child(9){  
+th:nth-child(9){
     padding-right: 12px;
 }
 
@@ -63,7 +63,7 @@ td:focus::after, th:focus::after {
     transform: translate(-50%, -50%);
     text-align: left;
     z-index: 1;
-    
+
 }
 
 /* Hover over tooltip to show tooltiptext */
@@ -78,7 +78,7 @@ td:focus::after, th:focus::after {
     color: white;
     background-color: black;
     height: auto;
-}    
+}
 
 /* The code box layout */
 
@@ -88,7 +88,7 @@ td:focus::after, th:focus::after {
     width: 500px;
     padding: 4px;
     margin-bottom: 20px;
-    
+
 }
 
 .tooltip.section{
@@ -100,4 +100,9 @@ td:focus::after, th:focus::after {
 .bytehighlight{
     background-color: rgb(95, 208, 50);
     color: black;
+}
+
+.highlight {
+  background-color: yellow;
+  color: black;
 }
