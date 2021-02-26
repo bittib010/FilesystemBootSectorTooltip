@@ -10,11 +10,17 @@
 </head>
 
 <body>
-    <p>All info is gatered from the below link. Purpose of this is to make it more visible when dealing with this type of information. Untill now it only contains info for the 36 first bytes.</p>
     <p>https://www.win.tue.nl/~aeb/linux/fs/fat/fat-1.html</p>
 
 
 
+    <h1>Boot-sector of a DRDOS boot floppy</h1>
+    <h3>In linux terms, this is called the superblock</h3>
+    <h5>Consists of the first 512 bytes</h5>
+
+    <ul>
+        <li>Endianess: Little endian</li>
+    </ul>
 
     <table class="codeBox">
         <tbody>
@@ -39,23 +45,29 @@
             </tr>
             <tr>
                 <td class="offset">000000</td>
-                <td><span class="tooltip">eb<span class="tooltiptext">Bytes: 0-2 <br>Offset: 0x00 <br>Purpose: Assembly
+                <td class="jump"><span class="tooltip">eb<span class="tooltiptext">Bytes: 0-2 <br>Offset: 0x00 <br>Purpose: Assembly
                             code instructions to jump to
-                            boot code (mandatory in bootable partition)</span></span>
+                            boot code (mandatory in bootable partition) <br>
+                            Example: eb 3c 90; on i86: JMP 003E NOP. <br>
+                            Variations: eb xx 90, e9 xx xx. The position of the bootstrap varies.</span></span>
                 </td>
-                <td><span class="tooltip">3f<span class="tooltiptext">Bytes: 0-2 <br>Offset: 0x01 <br>Purpose: Assembly
+                <td class="jump"><span class="tooltip">3f<span class="tooltiptext">Bytes: 0-2 <br>Offset: 0x01 <br>Purpose: Assembly
                             code instructions to jump to
-                            boot code (mandatory in bootable partition)</span></span>
+                            boot code (mandatory in bootable partition)<br>
+                            Example: eb 3c 90; on i86: JMP 003E NOP. <br>
+                            Variations: eb xx 90, e9 xx xx. The position of the bootstrap varies.</span></span>
                 </td>
-                <td><span class="tooltip">90<span class="tooltiptext">Bytes: 0-2 <br>Offset: 0x02 <br>Purpose: Assembly
-                            code instructions to jump to boot code (mandatory in bootable partition)</span></span>
-                </td>
-                <td><span class="tooltip OEM">49<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x03<br>Purpose: OEM name in ASCII</span></span></td>
-                <td><span class="tooltip OEM">42<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x04<br>Purpose: OEM name in ASCII</span></span></td>
-                <td><span class="tooltip">4d<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x05<br>Purpose: OEM name in ASCII</span></span></td>
-                <td><span class="tooltip">20<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x06<br>Purpose: OEM name in ASCII</span></span></td>
-                <td><span class="tooltip">20<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x07<br>Purpose: OEM name in ASCII</span></span></td>
-                <td><span class="tooltip">33<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x08<br>Purpose: OEM name in ASCII</span></span></td>
+                <td class="jump"><span class="tooltip">90<span class="tooltiptext">Bytes: 0-2 <br>Offset: 0x02 <br>Purpose: Assembly
+                            code instructions to jump to boot code (mandatory in bootable partition)<br>
+                            Example: eb 3c 90; on i86: JMP 003E NOP. <br>
+                            Variations: eb xx 90, e9 xx xx. The position of the bootstrap varies.</span></span>
+                </td class=>
+                <td class="oem"><span class="tooltip">49<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x03<br>Purpose: OEM name in ASCII</span></span></td>
+                <td class="oem"><span class="tooltip">42<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x04<br>Purpose: OEM name in ASCII</span></span></td>
+                <td class="oem"><span class="tooltip">4d<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x05<br>Purpose: OEM name in ASCII</span></span></td>
+                <td class="oem"><span class="tooltip">20<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x06<br>Purpose: OEM name in ASCII</span></span></td>
+                <td class="oem"><span class="tooltip">20<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x07<br>Purpose: OEM name in ASCII</span></span></td>
+                <td class="oem"><span class="tooltip">33<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x08<br>Purpose: OEM name in ASCII</span></span></td>
                 <td><span class="tooltip">2e<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x09<br>Purpose: OEM name in ASCII</span></span></td>
                 <td><span class="tooltip">33<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x010<br>Purpose: OEM name in ASCII</span></span></td>
                 <td><span class="tooltip">00<span class="tooltiptext">Bytes: 11-12<br>Offset: 0x011<br>Purpose: Bytes per sector (512, 1024, 2048, or 4096)</span></span></td>
@@ -678,6 +690,11 @@
             </tr>
         </tbody>
     </table>
+
+    <ul>
+        <li></li>
+    </ul>
+
     <script src="javascript.js"></script>
 </body>
 
