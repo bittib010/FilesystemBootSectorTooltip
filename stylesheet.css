@@ -86,7 +86,6 @@ td:focus::after, th:focus::after {
     border: 2px solid rgb(209, 208, 207);
     margin: auto;
     width: 500px;
-    /*max-width: 600px;*/
     padding: 4px;
     margin-bottom: 20px;
     
