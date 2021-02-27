@@ -103,6 +103,6 @@ td:focus::after, th:focus::after {
 }
 
 .highlight {
-  background-color: yellow;
+  background-color: rgb(95, 208, 50);
   color: black;
 }
