@@ -61,53 +61,64 @@
                             code instructions to jump to boot code (mandatory in bootable partition)<br>
                             Example: eb 3c 90; on i86: JMP 003E NOP. <br>
                             Variations: eb xx 90, e9 xx xx. The position of the bootstrap varies.</span></span>
-                </td class=>
+                </td>
+
                 <td><span class="tooltip oem">49<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x03<br>Purpose: OEM name in ASCII</span></span></td>
                 <td><span class="tooltip oem">42<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x04<br>Purpose: OEM name in ASCII</span></span></td>
                 <td><span class="tooltip oem">4d<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x05<br>Purpose: OEM name in ASCII</span></span></td>
                 <td><span class="tooltip oem">20<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x06<br>Purpose: OEM name in ASCII</span></span></td>
                 <td><span class="tooltip oem">20<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x07<br>Purpose: OEM name in ASCII</span></span></td>
                 <td><span class="tooltip oem">33<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x08<br>Purpose: OEM name in ASCII</span></span></td>
-                <td><span class="tooltip">2e<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x09<br>Purpose: OEM name in ASCII</span></span></td>
-                <td><span class="tooltip">33<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x010<br>Purpose: OEM name in ASCII</span></span></td>
-                <td><span class="tooltip">00<span class="tooltiptext">Bytes: 11-12<br>Offset: 0x011<br>Purpose: Bytes per sector (512, 1024, 2048, or 4096)</span></span></td>
-                <td><span class="tooltip">02<span class="tooltiptext">Bytes: 11-12<br>Offset: 0x012<br>Purpose: Bytes per sector (512, 1024, 2048, or 4096)</span></span></td>
-                <td><span class="tooltip">01<span class="tooltiptext">Byte: 13<br>Offset: 0x013<br>Purpose: Sectors per cluster (Must be a power of 2 and cluster size must be &#60 32KB)</span></span></td>
-                <td><span class="tooltip">01<span class="tooltiptext">Bytes: 14-15<br>Offset: 0x014<br>Purpose: Size of reserved area, in sectors </span></span></td>
-                <td><span class="tooltip">00<span class="tooltiptext">Bytes: 14-15<br>Offset: 0x015<br>Purpose: Size of reserved area, in sectors </span></span></td>
+                <td><span class="tooltip oem">2e<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x09<br>Purpose: OEM name in ASCII</span></span></td>
+                <td><span class="tooltip oem">33<span class="tooltiptext">Bytes: 3-10<br>Offset: 0x010<br>Purpose: OEM name in ASCII</span></span></td>
+
+                <td><span class="tooltip sectorbytes">00<span class="tooltiptext">Bytes: 11-12<br>Offset: 0x011<br>Purpose: Bytes per sector (512, 1024, 2048, or 4096)</span></span></td>
+                <td><span class="tooltip sectorbytes">02<span class="tooltiptext">Bytes: 11-12<br>Offset: 0x012<br>Purpose: Bytes per sector (512, 1024, 2048, or 4096)</span></span></td>
+                
+                <td><span class="tooltip sectorscluster">01<span class="tooltiptext">Byte: 13<br>Offset: 0x013<br>Purpose: Sectors per cluster (Must be a power of 2 and cluster size must be &#60 32KB)</span></span></td>
+                
+                <td><span class="tooltip reserved">01<span class="tooltiptext">Bytes: 14-15<br>Offset: 0x014<br>Purpose: Size of reserved area, in sectors </span></span></td>
+                <td><span class="tooltip reserved">00<span class="tooltiptext">Bytes: 14-15<br>Offset: 0x015<br>Purpose: Size of reserved area, in sectors </span></span></td>
             </tr>
 
             <tr>
                 <td class="offset">000010</td>
-                <td><span class="tooltip">02<span class="tooltiptext">Byte: 16<br>Offset: 0x10<br>Purpose: Number of FATs (usually 2) </span></span></td>
-                <td><span class="tooltip">e0<span class="tooltiptext">Bytes: 17-18<br>Offset: 0x11<br>Purpose: Maximum number of files in the root directory (FAT12/16; 0 for FAT32) </span></span></td>
-                <td><span class="tooltip">00<span class="tooltiptext">Bytes: 17-18<br>Offset: 0x12<br>Purpose: Maximum number of files in the root directory (FAT12/16; 0 for FAT32) </span></span></td>
-                <td><span class="tooltip">40<span class="tooltiptext">Bytes: 19-20<br>Offset: 0x13<br>Purpose: Number of sectors in the file system; if 2 B is not large enough, set to 0 and use 4 B value in bytes
+                <td><span class="tooltip numFATs">02<span class="tooltiptext">Byte: 16<br>Offset: 0x10<br>Purpose: Number of FATs (usually 2) </span></span></td>
+                
+                <td><span class="tooltip maxrootfile">e0<span class="tooltiptext">Bytes: 17-18<br>Offset: 0x11<br>Purpose: Maximum number of files in the root directory (FAT12/16; 0 for FAT32) </span></span></td>
+                <td><span class="tooltip maxrootfile">00<span class="tooltiptext">Bytes: 17-18<br>Offset: 0x12<br>Purpose: Maximum number of files in the root directory (FAT12/16; 0 for FAT32) </span></span></td>
+                
+                <td><span class="tooltip sectorssystem">40<span class="tooltiptext">Bytes: 19-20<br>Offset: 0x13<br>Purpose: Number of sectors in the file system; if 2 B is not large enough, set to 0 and use 4 B value in bytes
                             32-35 below </span></span></td>
-                <td><span class="tooltip">0b<span class="tooltiptext">Bytes: 19-20<br>Offset: 0x14<br>Purpose: Number of
+                <td><span class="tooltip sectorssystem">0b<span class="tooltiptext">Bytes: 19-20<br>Offset: 0x14<br>Purpose: Number of
                             sectors in the file system; if 2 B is not large enough, set to 0 and use 4 B value in bytes
                             32-35 below </span></span></td>
-                <td><span class="tooltip">f0<span class="tooltiptext">Byte: 21<br>Offset: 0x15<br>Purpose: Media type
+
+                <td><span class="tooltip mediatype">f0<span class="tooltiptext">Byte: 21<br>Offset: 0x15<br>Purpose: Media type
                             (0xf0=removable disk, 0xf8=fixed disk) </span></span></td>
-                <td><span class="tooltip">09<span class="tooltiptext">Bytes: 22-23<br>Offset: 0x16<br>Purpose: Size of
+
+                <td><span class="tooltip FATsize">09<span class="tooltiptext">Bytes: 22-23<br>Offset: 0x16<br>Purpose: Size of
                             each FAT, in sectors, for FAT12/16; 0 for FAT32 </span></span></td>
-                <td><span class="tooltip">00<span class="tooltiptext">Bytes: 22-23<br>Offset: 0x17<br>Purpose: Size of
+                <td><span class="tooltip FATsize">00<span class="tooltiptext">Bytes: 22-23<br>Offset: 0x17<br>Purpose: Size of
                             each FAT, in sectors, for FAT12/16; 0 for FAT32 </span></span></td>
-                <td><span class="tooltip">12<span class="tooltiptext">Bytes: 24-25<br>Offset: 0x18<br>Purpose: Sectors
+                            
+                <td><span class="tooltip sectorstrack">12<span class="tooltiptext">Bytes: 24-25<br>Offset: 0x18<br>Purpose: Sectors
                             per track in storage device </span></span></td>
-                <td><span class="tooltip">00<span class="tooltiptext">Bytes: 24-25<br>Offset: 0x19<br>Purpose: Sectors
+                <td><span class="tooltip sectorstrack">00<span class="tooltiptext">Bytes: 24-25<br>Offset: 0x19<br>Purpose: Sectors
                             per track in storage device </span></span></td>
-                <td><span class="tooltip">02<span class="tooltiptext">Bytes: 26-27<br>Offset: 0x1a<br>Purpose: Number of
+
+                <td><span class="tooltip headnums">02<span class="tooltiptext">Bytes: 26-27<br>Offset: 0x1a<br>Purpose: Number of
                             heads in storage device </span></span></td>
-                <td><span class="tooltip">00<span class="tooltiptext">Bytes: 26-27<br>Offset: 0x1b<br>Purpose: Number of
+                <td><span class="tooltip headnums">00<span class="tooltiptext">Bytes: 26-27<br>Offset: 0x1b<br>Purpose: Number of
                             heads in storage device </span></span></td>
-                <td><span class="tooltip">00<span class="tooltiptext">Bytes: 28-31<br>Offset: 0x1c<br>Purpose: Number of
+
+                <td><span class="tooltip presectors">00<span class="tooltiptext">Bytes: 28-31<br>Offset: 0x1c<br>Purpose: Number of
                             sectors before the start partition </span></span></td>
-                <td><span class="tooltip">00<span class="tooltiptext">Bytes: 28-31<br>Offset: 0x1d<br>Purpose: Number of
+                <td><span class="tooltip presectors">00<span class="tooltiptext">Bytes: 28-31<br>Offset: 0x1d<br>Purpose: Number of
                             sectors before the start partition </span></span></td>
-                <td><span class="tooltip">00<span class="tooltiptext">Bytes: 28-31<br>Offset: 0x1e<br>Purpose: Number of
+                <td><span class="tooltip presectors">00<span class="tooltiptext">Bytes: 28-31<br>Offset: 0x1e<br>Purpose: Number of
                             sectors before the start partition </span></span></td>
-                <td><span class="tooltip">00<span class="tooltiptext">Bytes: 28-31<br>Offset: 0x1f<br>Purpose: Number of
+                <td><span class="tooltip presectors">00<span class="tooltiptext">Bytes: 28-31<br>Offset: 0x1f<br>Purpose: Number of
                             sectors before the start partition </span></span></td>
             </tr>
             <tr>

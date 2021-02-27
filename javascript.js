@@ -2,7 +2,7 @@ const cells = document.querySelectorAll('.tooltip');
 const table = document.querySelector('.codeBox');
 
 // Define the classes that a cell should contain in order to be highlighted
-const targetClass = ['oem', 'jump'];
+const targetClass = ['jump', 'oem', 'sectorbytes', 'sectorscluster', 'reserved', 'numFATs', 'maxrootfile', 'sectorssystem', 'mediatype', 'FATsize', 'sectorstrack', 'headnums', 'presectors'];
 
 let currentTarget = undefined;
 
