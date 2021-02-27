@@ -13,6 +13,8 @@ td, th {
     position: relative;
     outline: 0;
     padding-left: 2px;
+    transition: background-color .6s linear;
+
 }
 
 /* Separating 8 bytes by a little to make it easier to view/count */
@@ -88,6 +90,7 @@ td:focus::after, th:focus::after {
     width: 500px;
     padding: 4px;
     margin-bottom: 20px;
+
 
 }
 
