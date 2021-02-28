@@ -13,7 +13,7 @@ td, th {
     position: relative;
     outline: 0;
     padding-left: 2px;
-    transition: background-color .6s linear;
+    transition: background-color .1s linear;
 
 }
 
@@ -51,6 +51,7 @@ td:focus::after, th:focus::after {
 .tooltip .tooltiptext {
     visibility: hidden;
     width: fit-content;
+    max-width: 480px;
     height: fit-content;
     left: 50%;
     background-color: black;
