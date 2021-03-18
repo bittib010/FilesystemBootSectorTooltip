@@ -13,9 +13,12 @@ counter = 0 # Tracks every loop
 counter_rounds = 0 # To keep track of how many lines - also to make the <thead> and similar
 
 print(beginning)
+
 for i in boot_sector.split():
     if counter_rounds == 0 and counter == 0:  #print <thead> at beginning
         print("\t<thead>\n\t\t<tr>")
+    if counter_rounds == 1 and counter == 0:
+        print("\t</thead>\n\t\t")
     if counter == 0 and counter_rounds != 0:
             print("\t\t<tr>")
     print("\t\t\t<td><span class=\"tooltip\">", i, "<span class=\"tooltiptext\">Bytes: <br>Offset: 0x<br>Purpose: </span></span></td>")
@@ -25,4 +28,5 @@ for i in boot_sector.split():
         counter_rounds += 1
         continue
     counter += 1
+    
 print(ending)
