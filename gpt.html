@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FAT bootsector tooltips</title>
-    <style> body{
-    background-color: black;
-    color: #aaaaaa;
-}
+    <style>
 
 
 table {
@@ -63,8 +60,6 @@ td:focus::after, th:focus::after {
     height: fit-content;
     left: 50%;
     background-color: black;
-    color: #5fd032;
-    border: 2px solid #5fd032;
     border-radius: 6px;
     padding: 5px 5px;
     position: fixed;
@@ -77,48 +72,23 @@ td:focus::after, th:focus::after {
 
 }
 
-/* Hover over tooltip to show tooltiptext */
-
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
 
-/* Highlight hovered byte */
-
 .tooltip:hover{
     color: white;
-    background-color: black;
     height: auto;
 }
 
 /* The code box layout */
 
 .codeBox {
-    border: 2px solid rgb(209, 208, 207);
     margin: auto;
     width: 500px;
     padding: 4px;
     margin-bottom: 20px;
-
-
 }
-
-.tooltip.section{
-    background-color: rgba(130, 250, 250, 0.4);
-    color: green;
-}
-
-
-.bytehighlight{
-    background-color: rgb(95, 208, 50);
-    color: black;
-}
-
-.highlight {
-  background-color: rgb(95, 208, 50);
-  color: black;
-}
-
 
 </style>
 </head>
@@ -270,136 +240,6 @@ td:focus::after, th:focus::after {
                             4 B value in bytes 32-35 below <br>
                             Little Endian: "40 0b" = 2880</span></span></td>
 
-                <td><span class="tooltip mediatype">f0<span class="tooltiptext">
-                            Byte: 21<br>
-                            Offset: 0x15<br>
-                            Purpose: Media descriptor type. IBM defined this byte as 11111red, where r is removable, e is eight sectors/track, d is double sided. This code is also found in the first byte of the FAT. <br>
-                            Examples: <br>
-                            For 8" floppies: fc, fd, fe. <br>
-                            For 5.25" floppies:
-                            <table>
-                                <tr>
-                                    <th>Value</th>
-                                    <th>DOS version</th>
-                                    <th> Capacity</th>
-                                    <th>Sides</th>
-                                    <th>Tracks</th>
-                                    <th>Sectors/Tracks</th>
-                                </tr>
-                                <tr>
-                                    <td>ff</td>
-                                    <td>1.1</td>
-                                    <td>320 KB</td>
-                                    <td>2</td>
-                                    <td>40</td>
-                                    <td>8</td>
-                                </tr>
-                                <tr>
-                                    <td>fe</td>
-                                    <td>1.0</td>
-                                    <td>160 KB</td>
-                                    <td>1</td>
-                                    <td>40</td>
-                                    <td>8</td>
-                                </tr>
-                                <tr>
-                                    <td>fd</td>
-                                    <td>2.0</td>
-                                    <td>360 KB</td>
-                                    <td>2</td>
-                                    <td>40</td>
-                                    <td>9</td>
-                                </tr>
-                                <tr>
-                                    <td>fc</td>
-                                    <td>2.0</td>
-                                    <td>180 KB</td>
-                                    <td>1</td>
-                                    <td>40</td>
-                                    <td>9</td>
-                                </tr>
-                                <tr>
-                                    <td>fb</td>
-                                    <td></td>
-                                    <td>640 KB</td>
-                                    <td>2</td>
-                                    <td>80</td>
-                                    <td>8</td>
-                                </tr>
-                                <tr>
-                                    <td>fa</td>
-                                    <td></td>
-                                    <td>320 KB</td>
-                                    <td>1</td>
-                                    <td>80</td>
-                                    <td>8</td>
-                                </tr>
-                                <tr>
-                                    <td>f9</td>
-                                    <td>3.0</td>
-                                    <td>1200 KB</td>
-                                    <td>2</td>
-                                    <td>80</td>
-                                    <td>15</td>
-                                </tr>
-                            </table>
-
-                            For 3.5" floppies:
-                            <table>
-                                <tr>
-                                    <th>Value</th>
-                                    <th>DOS version</th>
-                                    <th> Capacity</th>
-                                    <th>Sides</th>
-                                    <th>Tracks</th>
-                                    <th>Sectors/Tracks</th>
-                                </tr>
-                                <tr>
-                                    <td>fb</td>
-                                    <td></td>
-                                    <td>640 KB</td>
-                                    <td>2</td>
-                                    <td>80</td>
-                                    <td>8</td>
-                                </tr>
-                                <tr>
-                                    <td>fa</td>
-                                    <td></td>
-                                    <td>320 KB</td>
-                                    <td>1</td>
-                                    <td>80</td>
-                                    <td>8</td>
-                                </tr>
-                                <tr>
-                                    <td>f9</td>
-                                    <td>3.2</td>
-                                    <td>720 KB</td>
-                                    <td>2</td>
-                                    <td>80</td>
-                                    <td>9</td>
-                                </tr>
-                                <tr>
-                                    <td>f0</td>
-                                    <td>3.3</td>
-                                    <td>1440 KB</td>
-                                    <td>2</td>
-                                    <td>80</td>
-                                    <td>18</td>
-                                </tr>
-                                <tr>
-                                    <td>f0</td>
-                                    <td></td>
-                                    <td>2880 KB</td>
-                                    <td>2</td>
-                                    <td>80</td>
-                                    <td>36</td>
-                                </tr>
-                            </table>
-
-                            For RAM disks: fa. <br>
-                            For hard disks: f8. DOS version: 2.0.
-                        </span></span></td>
-
                 <td><span class="tooltip FATsize">09<span class="tooltiptext">Bytes: 22-23<br>Offset: 0x16<br>Purpose:
                             Size of
                             each FAT, in sectors, for FAT12/16; 0 for FAT32 </span></span></td>
@@ -432,305 +272,50 @@ td:focus::after, th:focus::after {
                 <td><span class="tooltip bootstrap">00<span class="tooltiptext">Bytes: 30-509 Bootstrap code<br>Offset:
                             0x1f<br>Purpose: </span></span></td>
             </tr>
-            <tr>
-                <td class="offset">000020</td>
-                <td><span class="tooltip bootstrap">00<span class="tooltiptext">Bytes: 32-35<br>Offset: 0x20<br>Purpose:
-                            Number of
-                            sectors in the file system; this field will be 0 if the 2B field above (bytes 19-20) is
-                            non-zero </span></span></td>
-                <td><span class="tooltip bootstrap">00<span class="tooltiptext">Bytes: 32-35<br>Offset: 0x21<br>Purpose:
-                            Number of
-                            sectors in the file system; this field will be 0 if the 2B field above (bytes 19-20) is
-                            non-zero </span></span></td>
-                <td><span class="tooltip bootstrap">00<span class="tooltiptext">Bytes: 32-35<br>Offset: 0x22<br>Purpose:
-                            Number of
-                            sectors in the file system; this field will be 0 if the 2B field above (bytes 19-20) is
-                            non-zero </span></span></td>
-                <td><span class="tooltip bootstrap">00<span class="tooltiptext">Bytes: 32-35<br>Offset: 0x23<br>Purpose:
-                            Number of
-                            sectors in the file system; this field will be 0 if the 2B field above (bytes 19-20) is
-                            non-zero </span></span></td>
-                <td><span class="tooltip bootstrap">00<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">00<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">00<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">00<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">00<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">00<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">70<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">00<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">ff<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">ff<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">49<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">42<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-            </tr>
-            <tr>
-                <td class="offset">000030</td>
-                <td><span class="tooltip bootstrap">4d<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">42<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">49<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">4f<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">20<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">20<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">43<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">4f<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">4d<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">00<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">50<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">00<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">00<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">08<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">00<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">18<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-            </tr>
-            <tr>
-                <td class="offset">000040</td>
-                <td><span class="tooltip bootstrap">0a<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">fc<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">33<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">c0<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">8e<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">c0<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">fa<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">8e<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">d0<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">bc<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">00<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">7c<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">fb<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">33<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">d2<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">cd<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-            </tr>
-            <tr>
-                <td class="offset">000050</td>
-                <td><span class="tooltip bootstrap">13<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">bd<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">78<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">00<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">8b<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">fc<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">c5<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">76<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">00<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">89<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">7e<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">00<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">8c<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">46<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">02<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">b9<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-            </tr>
-            <tr>
-                <td class="offset">000060</td>
-                <td><span class="tooltip bootstrap">0b<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">00<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">f3<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">a4<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">91<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">8e<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">d8<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">8b<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">ec<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">c6<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">46<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">04<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">12<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">8a<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">46<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">0d<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-            </tr>
-            <tr>
-                <td class="offset">000070</td>
-                <td><span class="tooltip bootstrap">89<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">46<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">24<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">8a<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">46<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">10<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">f7<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">66<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">16<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">03<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">46<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">0e<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">83<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">d2<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">00<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">8b<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-            </tr>
-            <tr>
-                <td class="offset">000080</td>
-                <td><span class="tooltip bootstrap">4e<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">0b<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">81<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">f9<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">00<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">02<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">74<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">11<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">72<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">54<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">d1<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">e9<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">03<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">c0<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">83<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-                <td><span class="tooltip bootstrap">d2<span class="tooltiptext">Bytes: <br>Offset: 0x<br>Purpose:
-                        </span></span></td>
-            </tr>
+            
         </tbody>
     </table>
 
 
+        <script>
+    // Initialize variables
+    let gptTable = document.getElementById('gpt-table');
+    let gptData = [];
 
-    <script src="javascript.js">
-const cells = document.querySelectorAll('.tooltip');
-const table = document.querySelector('.codeBox');
+    // Fetch GPT data
+    fetch('gpt.json')
+        .then(response => response.json())
+        .then(data => {
+            gptData = data;
+            updateTable();
+        });
 
-// Define the classes that a cell should contain in order to be highlighted
-const targetClass = ['jump', 'oem', 'sectorbytes', 'sectorscluster', 'reserved', 'numFATs', 'maxrootfile', 'sectorssystem', 'mediatype', 'FATsize', 'sectorstrack', 'headnums', 'presectors', 'bootstrap', 'signature'];
+    // Update the table with GPT data
+    function updateTable() {
+        // Clear existing table rows
+        gptTable.innerHTML = '';
 
-let currentTarget = undefined;
+        // Loop through GPT data and create table rows
+        gptData.forEach(entry => {
+            let row = document.createElement('tr');
 
-table.addEventListener('mouseover', e => {
+            let partitionType = document.createElement('td');
+            partitionType.innerText = entry.partition_type;
+            row.appendChild(partitionType);
 
-  // Destructure the classlist, ignoring the first class which always is "tooltip"
-  // If there is no second class assigned, this cell will never be highlighted.
-  // You can choose whatever variable name you'd like
-  const [ _, byteType ] = e.target.classList;
+            let partitionGUID = document.createElement('td');
+            partitionGUID.innerText = entry.partition_guid;
+            row.appendChild(partitionGUID);
 
-  // In fact no other cells should be highlighted, so return immediately.
-  if (!byteType) return;
+            let partitionName = document.createElement('td');
+            partitionName.innerText = entry.partition_name;
+            row.appendChild(partitionName);
 
-  currentTarget = byteType;
-
-  // I created a "highlight" class that we only add to the parent element, which
-  // is the actual <td> element, despite the variable name I'm using right now
-  cells.forEach(cell => {
-    if (cell.classList.contains(currentTarget)) {
-      cell.parentElement.classList.add('highlight');
+            gptTable.appendChild(row);
+        });
     }
-  });
-});
-
-table.addEventListener('mouseout', e => {
-
-  cells.forEach(cell => {
-    if (cell.parentElement.classList.contains('highlight')) {
-      cell.parentElement.classList.remove('highlight');
-    }
-  });
-
-  currentTarget = undefined;
-});
 </script>
+
 </body>
 
 </html>
